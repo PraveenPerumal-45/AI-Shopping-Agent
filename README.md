@@ -418,31 +418,42 @@ The application uses SQLite.
 
 ### Product Search
 
-> *(Add Screenshot)*
+<img width="1915" height="871" alt="image" src="https://github.com/user-attachments/assets/e81087eb-435c-45d9-bb12-a64cc12f20c5" />
+
 
 ---
 
 ### Image Search
 
-> *(Add Screenshot)*
+<img width="1917" height="890" alt="image" src="https://github.com/user-attachments/assets/e8bb8e1f-3f05-4946-ad2f-373a2334733d" />
+
+<img width="1880" height="886" alt="image" src="https://github.com/user-attachments/assets/5619dd44-1189-422f-a474-b5ee3e69701d" />
+
+
 
 ---
 
 ### Order History
 
-> *(Add Screenshot)*
+<img width="1917" height="881" alt="image" src="https://github.com/user-attachments/assets/6f976db1-d780-4257-bea5-200181558b8e" />
+
 
 ---
 
 ### Shopping Summary
 
-> *(Add Screenshot)*
+<img width="1916" height="882" alt="image" src="https://github.com/user-attachments/assets/52b95493-1101-436f-a1c6-737935cfd4e3" />
+
 
 ---
 
 ### Guardrails
 
-> *(Add Screenshot)*
+<img width="1917" height="866" alt="image" src="https://github.com/user-attachments/assets/e7d3352d-4ef4-40c3-af01-471a0bf811f8" />
+
+<img width="1902" height="896" alt="image" src="https://github.com/user-attachments/assets/ea83ec55-f6b3-496d-a0b3-970746764a81" />
+
+
 
 ---
 
@@ -481,7 +492,7 @@ This project demonstrates:
 
 **Praveen Perumal**
 
-- LinkedIn: [*(Praveen Perumal)*](https://www.linkedin.com/in/praveen-perumal/)
+- LinkedIn: [*Praveen Perumal*](https://www.linkedin.com/in/praveen-perumal/)
 - GitHub: https://github.com/PraveenPerumal-45
 
 ---
