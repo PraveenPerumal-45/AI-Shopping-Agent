@@ -153,13 +153,6 @@ AI-Shopping-Assistant/
 ├── store.db
 ├── requirements.txt
 ├── README.md
-│
-└── screenshots/
-    ├── home.png
-    ├── image_search.png
-    ├── order_history.png
-    ├── shopping_summary.png
-    └── guardrails.png
 ```
 
 ---
