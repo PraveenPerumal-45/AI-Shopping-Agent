@@ -1,2 +1,488 @@
-# AI-Shopping-Agent
-AI Shopping Assistant powered by LangChain and Groq.  Features: - Product search - Image-based shopping - Product ratings - Order placement - Order history - Shopping summary - Guardrails
+# 🛒 AI Shopping Assistant
+
+An intelligent shopping assistant built using **LangChain**, **Groq LLMs**, **Streamlit**, and **SQLite**.
+
+The assistant helps users search products, compare ratings, shop using images, place orders, view previous purchases, and summarize shopping history using AI-powered tool calling.
+
+---
+
+## 🚀 Features
+
+### 🔍 Smart Product Search
+
+Search products using natural language.
+
+Example:
+
+> Find organic honey under $20 with rating above 4.5
+
+The agent automatically:
+
+- Searches the product database
+- Retrieves customer ratings
+- Filters products
+- Presents the best matches
+
+---
+
+### ⭐ Product Ratings
+
+Every product recommendation includes:
+
+- Average customer rating
+- Total review count
+
+Ratings are fetched dynamically from the reviews database.
+
+Example:
+
+```
+Organic Raw Honey
+★ 4.62
+128 Reviews
+```
+
+---
+
+### 🖼️ Shop by Image
+
+Upload a product image and the assistant will:
+
+- Analyze the image using a Vision LLM
+- Identify the product
+- Search similar products
+- Recommend matching products available in the store
+
+---
+
+### 🛍️ AI Checkout
+
+After selecting a product, the assistant can place an order.
+
+Example:
+
+```
+User:
+Buy Organic Almonds
+
+Assistant:
+Order #15 confirmed!
+```
+
+Orders are stored in SQLite.
+
+---
+
+### 📦 Order History
+
+The assistant remembers previous purchases.
+
+Example:
+
+```
+What have I ordered before?
+
+Show my previous orders
+
+Have I bought honey before?
+```
+
+---
+
+### 📊 Shopping Summary
+
+Generate personalized shopping statistics.
+
+Example:
+
+```
+Summarize my shopping history
+```
+
+Returns:
+
+- Total Orders
+- Total Money Spent
+- Average Order Value
+- Favorite Products
+
+---
+
+### 🛡️ Guardrails
+
+The assistant only handles shopping-related requests.
+
+Examples rejected:
+
+```
+Write me a poem
+
+Tell me a joke
+
+What's the weather?
+```
+
+This prevents prompt drift and keeps the assistant focused.
+
+---
+
+## 🏗️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend |
+| Streamlit | Web Interface |
+| LangChain | AI Agent |
+| Groq | LLM & Vision Models |
+| SQLite | Product & Order Database |
+| dotenv | Environment Variables |
+
+---
+
+## 📂 Project Structure
+
+```
+AI-Shopping-Assistant/
+│
+├── app.py
+├── shopping_agent.py
+├── setup_db.py
+├── reviews_api.py
+├── orders_api.py
+├── guardrails.py
+├── store.db
+├── requirements.txt
+├── README.md
+│
+└── screenshots/
+    ├── home.png
+    ├── image_search.png
+    ├── order_history.png
+    ├── shopping_summary.png
+    └── guardrails.png
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/<your-username>/ai-shopping-assistant.git
+
+cd ai-shopping-assistant
+```
+
+---
+
+### Create Virtual Environment
+
+Windows
+
+```bash
+python -m venv .venv
+
+.venv\Scripts\activate
+```
+
+Linux / macOS
+
+```bash
+python3 -m venv .venv
+
+source .venv/bin/activate
+```
+
+---
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Configure Environment Variables
+
+Create a `.env` file.
+
+```
+GROQ_API_KEY=your_api_key_here
+```
+
+---
+
+### Initialize Database
+
+```bash
+python setup_db.py
+```
+
+This creates:
+
+- Products
+- Reviews
+- Orders
+
+with sample data.
+
+---
+
+### Run Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 💬 Example Queries
+
+### Product Search
+
+```
+Find organic honey under $20
+
+Show organic coffee
+
+Recommend healthy snacks
+
+Find olive oil with rating above 4
+```
+
+---
+
+### Image Search
+
+Upload an image and click
+
+```
+Find Similar Products
+```
+
+---
+
+### Checkout
+
+```
+Buy Organic Almonds
+
+Order number 2
+
+Yes
+```
+
+---
+
+### Order History
+
+```
+Show my order history
+
+What have I bought before?
+
+Have I ordered honey?
+```
+
+---
+
+### Shopping Summary
+
+```
+Summarize my purchases
+
+How much have I spent?
+
+What do I buy the most?
+```
+
+---
+
+## 🤖 AI Agent Workflow
+
+```
+                User
+                  │
+                  ▼
+         Conversation Guardrail
+                  │
+                  ▼
+           LangChain Agent
+                  │
+      ┌───────────┼─────────────┐
+      │           │             │
+      ▼           ▼             ▼
+ Product Tool  Review Tool  Orders Tool
+      │           │             │
+      └───────────┼─────────────┘
+                  │
+                  ▼
+              SQLite Database
+```
+
+---
+
+## 🧠 Tools Used by the Agent
+
+The agent uses multiple tools depending on the user's request.
+
+### Product Search Tool
+
+Search products using filters like:
+
+- Product name
+- Category
+- Price
+- Organic status
+
+---
+
+### Rating Tool
+
+Retrieves:
+
+- Average Rating
+- Review Count
+
+---
+
+### Checkout Tool
+
+Places an order and stores it in the database.
+
+---
+
+### Order History Tool
+
+Returns previous purchases.
+
+---
+
+### Shopping Summary Tool
+
+Generates shopping analytics.
+
+---
+
+### Vision Tool
+
+Uses an image to identify products and recommend similar items.
+
+---
+
+## 🗄️ Database
+
+The application uses SQLite.
+
+### Products
+
+- Product Name
+- Category
+- Price
+- Organic Flag
+- Description
+
+---
+
+### Reviews
+
+- Product ID
+- Rating
+- Reviewer
+- Review
+
+---
+
+### Orders
+
+- Order ID
+- Product
+- Quantity
+- Unit Price
+- Total Price
+- Status
+- Order Date
+
+---
+
+## 📸 Screenshots
+
+### Home
+
+> *(Add Screenshot)*
+
+---
+
+### Product Search
+
+> *(Add Screenshot)*
+
+---
+
+### Image Search
+
+> *(Add Screenshot)*
+
+---
+
+### Order History
+
+> *(Add Screenshot)*
+
+---
+
+### Shopping Summary
+
+> *(Add Screenshot)*
+
+---
+
+### Guardrails
+
+> *(Add Screenshot)*
+
+---
+
+## 🎯 Future Improvements
+
+- Personalized Recommendations
+- Frequently Bought Together
+- Multi-user Authentication
+- Shopping Cart
+- Wishlist
+- Price Drop Notifications
+- Product Comparison
+- AI Product Summaries
+- Order Tracking
+- LangSmith Evaluation Dashboard
+
+---
+
+## 📌 Learning Outcomes
+
+This project demonstrates:
+
+- AI Agent Development
+- Tool Calling
+- Retrieval-Augmented Tool Usage
+- Vision Models
+- Prompt Engineering
+- Guardrails
+- Streamlit Applications
+- SQLite Integration
+- Multi-tool Agent Orchestration
+
+---
+
+## 👨‍💻 Author
+
+**Praveen P**
+
+- LinkedIn: *(Add your profile)*
+- GitHub: https://github.com/PraveenPerumal-45
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
