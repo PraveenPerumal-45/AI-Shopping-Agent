@@ -411,7 +411,8 @@ The application uses SQLite.
 
 ### Home
 
-> *(Add Screenshot)*
+<img width="1917" height="921" alt="image" src="https://github.com/user-attachments/assets/c79ff200-8c5e-45c0-97a7-34105316f817" />
+
 
 ---
 
@@ -478,9 +479,9 @@ This project demonstrates:
 
 ## 👨‍💻 Author
 
-**Praveen P**
+**Praveen Perumal**
 
-- LinkedIn: *(Add your profile)*
+- LinkedIn: [*(Praveen Perumal)*](https://www.linkedin.com/in/praveen-perumal/)
 - GitHub: https://github.com/PraveenPerumal-45
 
 ---
