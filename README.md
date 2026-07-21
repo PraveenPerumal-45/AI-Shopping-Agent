@@ -1,3 +1,13 @@
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+![LangChain](https://img.shields.io/badge/LangChain-Agent-green)
+
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+
+![License](https://img.shields.io/badge/License-MIT-green)
+
 # 🛒 AI Shopping Assistant
 
 An intelligent shopping assistant built using **LangChain**, **Groq LLMs**, **Streamlit**, and **SQLite**.
