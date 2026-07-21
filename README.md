@@ -1,12 +1,4 @@
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-
-![LangChain](https://img.shields.io/badge/LangChain-Agent-green)
-
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
-
-![License](https://img.shields.io/badge/License-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![LangChain](https://img.shields.io/badge/LangChain-Agent-green) ![Streamlit](https://img.shields.io/badge/Streamlit-App-red) ![Docker](https://img.shields.io/badge/Docker-Ready-blue) ![License](https://img.shields.io/badge/License-MIT-green)
 
 # 🛒 AI Shopping Assistant
 
@@ -474,6 +466,26 @@ The application uses SQLite.
 - LangSmith Evaluation Dashboard
 
 ---
+
+## Run with Docker
+
+### Build the image
+
+```bash
+docker build -t shopping-agent .
+```
+
+### Run the container
+
+```bash
+docker run -p 8501:8501 --env-file .env shopping-agent
+```
+
+Open:
+
+```
+http://localhost:8501
+```
 
 ## 📌 Learning Outcomes
 
